@@ -1,0 +1,100 @@
+
+BasedOnStyle: Mozilla
+
+---
+Language: Cpp
+Standard: Cpp11
+IndentWidth: 4
+ConstructorInitializerIndentWidth: 4
+ColumnLimit: 100
+
+# Force pointers to the type for C++.
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+# Comments
+FixNamespaceComments: true
+
+UseTab: Always
+TabWidth: 4
+NamespaceIndentation: None
+
+#Alignment
+AccessModifierOffset: -4
+AlignConsecutiveAssignments: true
+AlignTrailingComments: true
+AlignConsecutiveDeclarations: false
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None 
+AlignOperands: true
+AlignAfterOpenBracket : Align
+BinPackParameters: false
+AlignEscapedNewlines: Left
+
+#Single lining
+AllowShortFunctionsOnASingleLine: true
+AllowShortBlocksOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: true
+BreakBeforeBraces: Custom
+
+# Control of individual brace wrapping cases
+BraceWrapping: {
+    AfterClass: 'true'
+    AfterControlStatement: 'true'
+    AfterEnum: 'true'
+    AfterFunction: 'true'
+    AfterNamespace: 'true'
+    AfterStruct: 'true'
+    AfterUnion: 'true'
+    BeforeCatch: 'true'
+    BeforeElse: 'true'
+    IndentBraces : 'false'
+}
+BreakBeforeInheritanceComma: false
+BreakConstructorInitializersBeforeComma: true
+BreakBeforeTernaryOperators: true
+
+# No Break after Return Type
+AlwaysBreakAfterReturnType: None
+AlwaysBreakAfterDefinitionReturnType: None
+
+#NewLine Penalties
+PenaltyReturnTypeOnItsOwnLine: 500
+PenaltyBreakAssignment: 100
+PenaltyBreakBeforeFirstCallParameter: 120
+PenaltyBreakComment: 120
+PenaltyBreakFirstLessLess: 100
+PenaltyBreakString: 100
+PenaltyExcessCharacter: 100
+
+
+# Brace Spacing
+Cpp11BracedListStyle: true
+IndentCaseLabels: false
+SpaceAfterCStyleCast: false
+SpacesInCStyleCastParentheses: false
+SpacesInAngles: false
+SpacesInSquareBrackets: false
+SpaceInEmptyParentheses: false
+SpaceBeforeParens: Never
+SpaceBeforeAssignmentOperators: true
+SpaceAfterTemplateKeyword: true
+
+#Sort Includes
+IncludeCategories:
+  - Regex:           '.*\.generated\.hpp'
+    Priority:        3
+  - Regex:           '.*\.generated\.h'
+    Priority:        3
+  - Regex:           '.*PCH.h'
+    Priority:        -1
+  - Regex:           '.*PCH.hpp'
+    Priority:        -1
+  - Regex:           'Precompiled.h'
+    Priority:        -1
+  - Regex:           'Precompiled.hpp'
+    Priority:        -1
+  - Regex:           '.*'
+    Priority:        2
